@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 
+
+/* HOME - NOS PRODUITS */
+.home-card{
+  padding: 2rem;
+  color: white;
+}
+.home-card-title {
+  font-size: 96px;
+  line-height: 0.9;
+  font-weight: 600;
+  color: white;
+}
+.home-card-1 {
+  background: linear-gradient(to right, #FF6162, #FE5D5C);
+  border-radius: 20px 20px 0px 20px;
+}
+
+.home-card-2 {
+  background: linear-gradient(to left, #FFB168, #FFD359);
+  border-radius: 20px 20px 20px 0px;
+}
+
+
+.home-card-3 {
+  background: linear-gradient(to right, #9479A6, #9F71BD);
+  border-radius: 20px 0px 20px 20px;
+}
+
+.home-card-4 {
+  background: linear-gradient(to right, #D0E484, #A1BC1B);
+  border-radius: 0px 20px 20px 0px;
+}
+
+.guy-image {
+  z-index: 40;
+  position: absolute;
+  top: -10.5rem;
+  left: 7rem;
+  object-fit: cover;
+}
+

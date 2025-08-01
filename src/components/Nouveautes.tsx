@@ -1,0 +1,21 @@
+import Image from 'next/image'
+
+export default function Nouveautes() {
+  return (
+    <section className="py-20 bg-gray-100">
+      <div className="container mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Les Nouveautés
+          </h2>
+        </div>
+        <div className="w-full h-100">
+          <Image src="/images/nouveautes.webp" alt="Nouveautés" width={1000} height={1000} className="w-full h-full object-cover" />
+        </div>
+        <div className="w-full flex justify-center mt-2">
+          <button className='bg-primary text-white px-6 py-2 rounded-md'>Voir plus</button>
+        </div>
+      </div>
+    </section>
+  )
+} 
