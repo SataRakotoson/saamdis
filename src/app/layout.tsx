@@ -5,8 +5,12 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Votre Distributeur de Confiance - À La Réunion',
-  description: 'Profitez d\'une sélection exclusive de produits variés à La Réunion',
+  title: 'SAAMDIS',
+  description: 'SAAMDIS, votre distributeur alimentaire de confiance à La Réunion. Spécialisé dans les snacks, boissons, chips et confiseries.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({

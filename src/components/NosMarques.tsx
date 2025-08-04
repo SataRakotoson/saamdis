@@ -74,9 +74,12 @@ function NosMarques() {
           </Slider>
           <p className='text-center text-gray-600 light-italic' >Besoin de snacks, boissons ou confiseries pour votre commerce à La Réunion ? Contactez-nous dès aujourd’hui!</p>
           <div className='flex justify-center mt-5'>
-            <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-12 rounded-lg text-xl transition-colors">
+            <a
+              href="/contact"
+              className="bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-12 rounded-lg text-xl transition-colors text-center"
+            >
               Contacter
-            </button>
+            </a>
           </div>
         </div>
       </div>

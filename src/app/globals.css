@@ -113,38 +113,78 @@ body {
 
 .home-card-title {
   color: white;
-  font-size: 96px;
-  line-height: 0.9;
-  font-weight: 600;
+  font-size: 48px;
   line-height: 0.85;
   font-style: italic;
   font-weight: 900;
 }
 
+@media (min-width: 768px) {
+  .home-card-title {
+    font-size: 96px;
+  }
+}
+
 .home-card p {
   font-style: italic;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .home-card p {
+    font-size: 24px;
+  }
 }
 
 .home-card-1 {
   background: linear-gradient(to right, #FF6162, #FE5D5C);
+  border-radius: 20px 20px 0px 20px;
+  transition: background-position 0.6s cubic-bezier(0.4,0,0.2,1), background-size 0.6s cubic-bezier(0.4,0,0.2,1);
+  background-size: 200% 100%;
+  background-position: right center;
+}
+.home-card-1:hover {
+  background-position: left center;
+  background-size: 200% 100%;
   border-radius: 20px 20px 0px 20px;
 }
 
 .home-card-2 {
   background: linear-gradient(to left, #FFB168, #FFD359);
   border-radius: 20px 20px 20px 0px;
+  transition: background-position 0.6s cubic-bezier(0.4,0,0.2,1), background-size 0.6s cubic-bezier(0.4,0,0.2,1);
+  background-size: 200% 100%;
+  background-position: right center;
+}
+.home-card-2:hover {
+  background-position: left center;
+  background-size: 200% 100%;
 }
 
 
 .home-card-3 {
-  background: linear-gradient(to right, #9479A6, #9F71BD);
+  background: linear-gradient(to left, #9479A6, #9F71BD);
   border-radius: 20px 0px 20px 20px;
+  transition: background-position 0.6s cubic-bezier(0.4,0,0.2,1), background-size 0.6s cubic-bezier(0.4,0,0.2,1);
+  background-size: 200% 100%;
+  background-position: right center;
+}
+.home-card-3:hover {
+  background-position: left center;
+  background-size: 200% 100%;
 }
 
 .home-card-4 {
   background: linear-gradient(to right, #D0E484, #A1BC1B);
+  border-radius: 0px 20px 20px 20px;
+  transition: background-position 0.6s cubic-bezier(0.4,0,0.2,1), background-size 0.6s cubic-bezier(0.4,0,0.2,1);
+  background-size: 200% 100%;
+  background-position: right center;
+}
+.home-card-4:hover {
+  background-position: left center;
+  background-size: 200% 100%;
   border-radius: 0px 20px 20px 20px;
 }
 
@@ -173,3 +213,16 @@ body {
   cursor: pointer;
   margin-bottom: -17px;
 }
+
+.card-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+

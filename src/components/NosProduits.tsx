@@ -11,7 +11,7 @@ export default function NosProduits() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="home-card home-card-1">
             <h3 className="home-card-title">Snacks <br /> Sucrés</h3>
             <p className="text-white">Gâteaux, madeleines, brownies...</p>
