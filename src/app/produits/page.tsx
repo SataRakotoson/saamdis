@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Produits() {
   const categories = [
-    { id: 'all', nom: "Tous les produits", color: "bg-[#29425c]" },
+    { id: 'all', nom: "Tous les produits", color: "bg-[#892444]" },
     { id: 'sucres', nom: "Snacks sucrés", color: "home-card-1" },
     { id: 'sales', nom: "Snacks salés", color: "home-card-2" },
     { id: 'confiseries', nom: "Confiseries et céréales", color: "home-card-3" },
@@ -17,7 +17,7 @@ export default function Produits() {
       nom: "Adoro - Gâteau moelleux au cacao",
       subtitle: "30g - packing 24 - DLV 09 mois",
       description: "Un gâteau moelleux au cacao qui ravira tous les amateurs de chocolat.",
-      image: "/images/produits/adoro-cake.webp",
+      image: "/images/products/1.webp",
       categorie: "sucres",
       tagColor: "bg-red-500"
     },
@@ -26,7 +26,7 @@ export default function Produits() {
       nom: "MAD CORN'S",
       subtitle: "Chips de maïs barbecue",
       description: "Chips de maïs barbecue, une saveur unique et addictive pour vos moments de détente.",
-      image: "/images/produits/mad-corns.webp",
+      image: "/images/products/2.webp",
       categorie: "sales",
       tagColor: "bg-[#f7a139]"
     },
@@ -35,7 +35,7 @@ export default function Produits() {
       nom: "MAD Flakes",
       subtitle: "Céréales chocolatées",
       description: "Céréales chocolatées, parfaites pour un petit-déjeuner gourmand et énergétique.",
-      image: "/images/produits/mad-flakes.webp",
+      image: "/images/products/3.webp",
       categorie: "confiseries",
       tagColor: "bg-[#29425c]"
     },
@@ -44,7 +44,7 @@ export default function Produits() {
       nom: "délice - NECTAR TROPICAL",
       subtitle: "Jus de fruits tropicaux",
       description: "Jus de fruits tropicaux, un mélange rafraîchissant de mangue et fruits exotiques.",
-      image: "/images/produits/delice-tropical.webp",
+      image: "/images/products/4.webp",
       categorie: "boissons",
       tagColor: "bg-green-500"
     }
@@ -109,8 +109,14 @@ export default function Produits() {
             {produits.map((produit) => (
               <div key={produit.id} className="border-2 border-gray-200 p-4 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative">
                 <div className="relative">
-                  <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                    <span className="text-gray-500">Image du produit</span>
+                  <div className="w-full h-48 bg-white flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={produit.image}
+                      alt={produit.nom}
+                      width={200}
+                      height={200}
+                      className="transition-transform duration-300 ease-in-out group-hover:scale-110 hover:scale-110"
+                    />
                   </div>
                 </div>
                 <div className="p-4">
