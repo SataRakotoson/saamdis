@@ -1,6 +1,7 @@
 'use client'
 
 import { Facebook, Instagram } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Header() {
@@ -10,8 +11,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary">
-              LOGO
+            <Link href="/">
+              <Image src="/images/logo.png" alt="Logo" width={120} height={120} />
             </Link>
           </div>
 

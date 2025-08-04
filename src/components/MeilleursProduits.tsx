@@ -60,7 +60,7 @@ export default function MeilleursProduits() {
             {Array.from({ length: 3 }, (_, cycleIndex) =>
               produits.map((produit) => (
                 <div key={`${produit.id}-${cycleIndex}-${Math.random().toString(36).substr(2, 9)}`}>
-                  <Image src={`/images/bestproducts/${produit.image}`} alt={produit.nom} width={400} height={400} />
+                  <Image src={`/images/bestproducts/${produit.image}`} alt={produit.nom} width={400} height={400} className='cursor-grab' />
                 </div>
               ))
             ).flat()}

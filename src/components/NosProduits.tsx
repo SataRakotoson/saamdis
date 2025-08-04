@@ -6,7 +6,7 @@ export default function NosProduits() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             Nos Produits
           </h2>
-          <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+          <p className="light-italic text-gray-600 px-5">
             SAAMDIS, distributeur alimentaire à La Réunion, propose les marques MAD, Moulin d'Or, Délices de Fruits et bien d'autres à venir. Spécialisés dans la distribution de produits alimentaires, snacks, boissons et confiseries, nous répondons aux attentes du marché réunionnais.
           </p>
         </div>

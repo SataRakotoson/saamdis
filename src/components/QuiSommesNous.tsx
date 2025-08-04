@@ -15,16 +15,16 @@ export default function QuiSommesNous() {
           <div className="grid grid-cols-2 gap-12 items-center">
             <div className="col-span-1 relative">
             </div>
-            <div className="col-span-1 text-white">
+            <div className="col-span-1 text-white whoweare">
               <h2 className="text-4xl font-bold mb-6">Qui Sommes-Nous</h2>
-              <p className="text-xl leading-relaxed">
+              <p className="text-xl leading-relaxed semibold">
                 SAAMDIS est un distributeur alimentaire basé à La Réunion, spécialisé dans les produits variés et de qualité.
                 <br /> <br />
                 Nous proposons une large gamme 
                 de snacks, boissons, chips, jus et confiseries, adaptés aux goûts locaux. Notre mission : dynamiser le marché réunionnais avec des produits originaux, accessibles et soigneusement sélectionnés.
               </p>
               <div className="flex justify-center">
-                <button className='bg-white text-[#E4953E] text-white px-6 py-2 rounded-md mt-4'>En savoir plus</button>
+                <button className='bg-white text-[#E4953E] text-black light-italic px-6 py-2 rounded-md mt-4'>En savoir plus</button>
               </div>
             </div>
           </div>

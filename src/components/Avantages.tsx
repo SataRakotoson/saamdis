@@ -21,15 +21,12 @@ export default function Avantages() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           {avantages.map((avantage, index) => (
             <div key={index} className="flex flex-col items-center justify-center text-center p-8 ">
               <Image src={`/images/icons/${avantage.image}`} alt={avantage.title} width={100} height={100} />
-              {/* <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                {avantage.title}
-              </h3> */}
               <p className="text-gray-600 leading-relaxed mt-5">
                 {avantage.description}
               </p>

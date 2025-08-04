@@ -1,34 +1,52 @@
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Image from 'next/image'
 
 export default function Produits() {
   const categories = [
+    { id: 'all', nom: "Tous les produits", color: "bg-[#29425c]" },
+    { id: 'sucres', nom: "Snacks sucrés", color: "home-card-1" },
+    { id: 'sales', nom: "Snacks salés", color: "home-card-2" },
+    { id: 'confiseries', nom: "Confiseries et céréales", color: "home-card-3" },
+    { id: 'boissons', nom: "Jus et boissons", color: "home-card-4" }
+  ]
+
+  const produits = [
     {
       id: 1,
-      nom: "Snacks Sucrés",
-      description: "Une sélection gourmande de snacks sucrés",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      produits: ["Biscuits", "Chocolats", "Bonbons", "Gâteaux"]
+      nom: "Adoro - Gâteau moelleux au cacao",
+      subtitle: "30g - packing 24 - DLV 09 mois",
+      description: "Un gâteau moelleux au cacao qui ravira tous les amateurs de chocolat.",
+      image: "/images/produits/adoro-cake.webp",
+      categorie: "sucres",
+      tagColor: "bg-red-500"
     },
     {
       id: 2,
-      nom: "Snacks Salés",
-      description: "Des snacks salés pour tous les goûts",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      produits: ["Chips", "Crackers", "Noix", "Olives"]
+      nom: "MAD CORN'S",
+      subtitle: "Chips de maïs barbecue",
+      description: "Chips de maïs barbecue, une saveur unique et addictive pour vos moments de détente.",
+      image: "/images/produits/mad-corns.webp",
+      categorie: "sales",
+      tagColor: "bg-[#f7a139]"
     },
     {
       id: 3,
-      nom: "Confiseries et Céréales",
-      description: "Le meilleur des confiseries et céréales",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      produits: ["Céréales", "Muesli", "Fruits secs", "Barres énergétiques"]
+      nom: "MAD Flakes",
+      subtitle: "Céréales chocolatées",
+      description: "Céréales chocolatées, parfaites pour un petit-déjeuner gourmand et énergétique.",
+      image: "/images/produits/mad-flakes.webp",
+      categorie: "confiseries",
+      tagColor: "bg-[#29425c]"
     },
     {
       id: 4,
-      nom: "Jus et Boissons",
-      description: "Des boissons rafraîchissantes et naturelles",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      produits: ["Jus de fruits", "Eaux minérales", "Sodas", "Thés"]
+      nom: "délice - NECTAR TROPICAL",
+      subtitle: "Jus de fruits tropicaux",
+      description: "Jus de fruits tropicaux, un mélange rafraîchissant de mangue et fruits exotiques.",
+      image: "/images/produits/delice-tropical.webp",
+      categorie: "boissons",
+      tagColor: "bg-green-500"
     }
   ]
 
@@ -37,118 +55,89 @@ export default function Produits() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">Nos Produits</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Découvrez notre gamme complète de produits de qualité
+      <section className="pt-32 pb-20 bg-[#892444] about-page">
+        <div className="container mx-auto px-4 text-center text-white hero-about">
+          <h1 className="text-5xl font-bold mb-6">Nos produits</h1>
+          <p className="text-xl mx-auto">
+            Explorez notre sélection de produits alimentaires variés et soigneusement choisis pour leur qualité.
           </p>
         </div>
       </section>
 
-      {/* Catégories de produits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Nos Catégories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explorez nos différentes catégories de produits
-            </p>
+      {/* Search and Categories Section */}
+      <section className="pt-12 bg-gray-100">
+        <div className="container mx-auto px-4 relative">
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Rechercher un produit.."
+                className="w-full pl-12 pr-12 py-4 bg-white rounded-lg shadow-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#f7a139] focus:border-transparent"
+              />
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-4 categories-filter">
             {categories.map((categorie) => (
-              <div key={categorie.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src={categorie.image} 
-                  alt={categorie.nom}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">
-                    {categorie.nom}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {categorie.description}
-                  </p>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-800 mb-2">Produits inclus :</h4>
-                    <ul className="text-gray-600">
-                      {categorie.produits.map((produit, index) => (
-                        <li key={index} className="flex items-center">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                          {produit}
-                        </li>
-                      ))}
-                    </ul>
+              <button
+                key={categorie.id}
+                className={`${categorie.color} text-white px-6 py-3 hover:opacity-90 transition-opacity`}
+              >
+                {categorie.nom}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {produits.map((produit) => (
+              <div key={produit.id} className="border-2 border-gray-200 p-4 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative">
+                <div className="relative">
+                  <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+                    <span className="text-gray-500">Image du produit</span>
                   </div>
-                  <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-                    Voir les produits
-                  </button>
                 </div>
+                <div className="p-4">
+                  <h3 className="text-medium italic font-semibold text-gray-800 mb-2">{produit.nom}</h3>
+                  <p className='subtitle text-gray-600 mb-3 text-sm italic'> {produit.subtitle}</p>
+                  <p className="text-sm text-gray-600 mb-2">{produit.description}</p>
+                </div>
+                {/* Colored tag */}
+                {
+                  produit.categorie === 'sucres' && <Image src="/images/form/polygon-red.svg" alt="Clip Triangle" width={40} height={40} className='absolute bottom-0 right-0' />
+                }
+                {
+                  produit.categorie === 'sales' && <Image src="/images/form/polygon-yellow.svg" alt="Clip Triangle" width={40} height={40} className='absolute bottom-0 right-0' />
+                }
+                {
+                  produit.categorie === 'confiseries' && <Image src="/images/form/polygon-purple.svg" alt="Clip Triangle" width={40} height={40} className='absolute bottom-0 right-0' />
+                }
+                {
+                  produit.categorie === 'boissons' && <Image src="/images/form/polygon-green.svg" alt="Clip Triangle" width={40} height={40} className='absolute bottom-0 right-0' />
+                }
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section Promotions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Promotions Spéciales
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Profitez de nos offres exclusives
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="bg-red-100 text-red-600 font-bold py-2 px-4 rounded-full mb-4 inline-block">
-                -20%
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Pack Familial</h3>
-              <p className="text-gray-600 mb-4">Économisez sur nos packs familiaux</p>
-              <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-                Commander
-              </button>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="bg-green-100 text-green-600 font-bold py-2 px-4 rounded-full mb-4 inline-block">
-                Nouveau
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Produits Bio</h3>
-              <p className="text-gray-600 mb-4">Découvrez notre gamme bio</p>
-              <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-                Découvrir
-              </button>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="bg-blue-100 text-blue-600 font-bold py-2 px-4 rounded-full mb-4 inline-block">
-                Livraison
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Livraison Gratuite</h3>
-              <p className="text-gray-600 mb-4">Pour toute commande supérieure à 50€</p>
-              <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-                En savoir plus
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Votre Distributeur. Tous droits réservés.</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 } 
