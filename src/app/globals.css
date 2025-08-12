@@ -68,6 +68,16 @@ button {
   font-weight: 900;
   font-style: italic;
 }
+
+@media (max-width: 768px) {
+  .hero-about p {
+    font-size: 24px !important;
+  }
+  .about-page h1{
+    font-size: 48px !important;
+  }
+}
+
 .hero-about p {
   font-size: 36px;
   font-weight: 600;

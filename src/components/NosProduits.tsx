@@ -12,22 +12,22 @@ export default function NosProduits() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="home-card home-card-1">
+          <a href="/produits?category=sucres" className="home-card home-card-1 block">
             <h3 className="home-card-title">Snacks <br /> Sucrés</h3>
             <p className="text-white">Gâteaux, madeleines, brownies...</p>
-          </div>
-          <div className="home-card home-card-2">
+          </a>
+          <a href="/produits?category=sales" className="home-card home-card-2 block">
             <h3 className="home-card-title">Snacks <br /> Salés</h3>
             <p className="text-white">Chips et autres variétés d'encas salés</p>
-          </div>
-          <div className="home-card home-card-3">
+          </a>
+          <a href="/produits?category=confiseries" className="home-card home-card-3 block">
             <h3 className="home-card-title">Confiseries <br /> et Céréales</h3>
             <p className="text-white">Céréales sucrées, bonbons...</p>
-          </div>
-          <div className="home-card home-card-4">
+          </a>
+          <a href="/produits?category=boissons" className="home-card home-card-4 block">
             <h3 className="home-card-title">Jus et <br /> Boissons</h3>
             <p className="text-white">Boisson gazéifiée aromatisée, jus de fruits...</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

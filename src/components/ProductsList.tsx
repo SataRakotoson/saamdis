@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState, useEffect, useMemo } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 interface Produit {
   id: string
@@ -20,6 +21,25 @@ interface ProductsListProps {
 export default function ProductsList({ produits }: ProductsListProps) {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const searchParams = useSearchParams()
+
+  // Détection automatique de la catégorie depuis l'URL
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category')
+    if (categoryFromUrl) {
+      // Mapping des paramètres d'URL vers les IDs de catégorie
+      const categoryMapping: { [key: string]: string } = {
+        'sucres': 'sucres',
+        'sales': 'sales',
+        'confiseries': 'confiseries',
+        'boissons': 'boissons'
+      }
+      
+      if (categoryMapping[categoryFromUrl]) {
+        setSelectedCategory(categoryMapping[categoryFromUrl])
+      }
+    }
+  }, [searchParams])
 
   const categories = [
     { id: 'all', nom: "Tous les produits", color: "bg-[#892444]" },
