@@ -9,7 +9,7 @@ export default function Nouveautes() {
             Les Nouveautés
           </h2>
         </div>
-        <div className="w-full h-100">
+        <div className="w-full h-64 md:h-100">
           <Image src="/images/nouveautes.webp" alt="Nouveautés" width={1000} height={1000} className="w-full h-full object-cover" />
         </div>
         <div className="w-full flex justify-center mt-2">

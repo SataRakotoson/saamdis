@@ -19,7 +19,16 @@ export default function MeilleursProduits() {
     slidesToShow: 3.5,
     slidesToScroll: 3,
     centerMode: false,
-    variableWidth: false
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
   };
 
   const produits = [

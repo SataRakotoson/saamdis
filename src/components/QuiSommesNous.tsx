@@ -24,9 +24,9 @@ export default function QuiSommesNous() {
                 Nous proposons une large gamme 
                 de snacks, boissons, chips, jus et confiseries, adaptés aux goûts locaux. Notre mission : dynamiser le marché réunionnais avec des produits originaux, accessibles et soigneusement sélectionnés.
               </p>
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <a href="/a-propos" className='bg-white text-[#E4953E] text-black light-italic px-6 py-2 rounded-md mt-4 block text-center'>En savoir plus</a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -55,9 +55,9 @@ export default function QuiSommesNous() {
               Nous proposons une large gamme 
               de snacks, boissons, chips, jus et confiseries, adaptés aux goûts locaux. Notre mission : dynamiser le marché réunionnais avec des produits originaux, accessibles et soigneusement sélectionnés.
             </p>
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <button className='bg-white text-[#E4953E] text-black light-italic px-6 py-3 rounded-md hover:bg-gray-50 transition-colors'>En savoir plus</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
