@@ -8,6 +8,11 @@ import QuiSommesNous from '@/components/QuiSommesNous'
 import NosMarques from '@/components/NosMarques'
 import Footer from '@/components/Footer'
 
+export const metadata = {
+  title: 'SAAMDIS - Distributeur alimentaire à La Réunion',
+  description: 'Découvrez SAAMDIS : importateur de saveurs uniques et de marques exclusives à La Réunion. Une offre variée pour tous les goûts.',
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen">

@@ -3,6 +3,11 @@ import Footer from '@/components/Footer'
 import ProductsList from '@/components/ProductsList'
 import { getProduits } from '@/lib/airtable'
 
+export const metadata = {
+  title: 'SAAMDIS - Nos produits',
+  description: 'SAAMDIS propose des produits pour tous les goûts, à tous les prix. Un fournisseur réunionnais proche de ses clients et à l’écoute du marché.',
+}
+
 export default async function Produits() {
   // Récupération des produits côté serveur
   const produits = await getProduits()

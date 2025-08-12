@@ -2,6 +2,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 
+export const metadata = {
+  title: 'SAAMDIS - Qui sommes-nous ?',
+  description: 'Chez SAAMDIS, nous importons des produits uniques pour créer une offre alimentaire plus riche, plus variée et plus accessible à La Réunion.',
+}
+
 export default function APropos() {
   return (
     <main className="min-h-screen about-page">

@@ -5,6 +5,11 @@ import Header from '@/components/Header'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Footer from '@/components/Footer'
 
+export const metadata = {
+  title: 'SAAMDIS - Contactez-nous',
+  description: 'Contactez-nous pour toute demande de service ou de question.',
+}
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     nom: '',
