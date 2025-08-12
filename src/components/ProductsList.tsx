@@ -31,8 +31,8 @@ export default function ProductsList({ produits }: ProductsListProps) {
       const categoryMapping: { [key: string]: string } = {
         'sucres': 'sucres',
         'sales': 'sales',
-        'confiseries': 'confiseries',
-        'boissons': 'boissons'
+        'confiseries_cereales': 'confiseries_cereales',
+        'jus_boissons': 'jus_boissons'
       }
       
       if (categoryMapping[categoryFromUrl]) {
@@ -45,8 +45,8 @@ export default function ProductsList({ produits }: ProductsListProps) {
     { id: 'all', nom: "Tous les produits", color: "bg-[#892444]" },
     { id: 'sucres', nom: "Snacks sucrés", color: "home-card-1" },
     { id: 'sales', nom: "Snacks salés", color: "home-card-2" },
-    { id: 'confiseries', nom: "Confiseries et céréales", color: "home-card-3" },
-    { id: 'boissons', nom: "Jus et boissons", color: "home-card-4" }
+    { id: 'confiseries_cereales', nom: "Confiseries et céréales", color: "home-card-3" },
+    { id: 'jus_boissons', nom: "Jus et boissons", color: "home-card-4" }
   ]
 
   // Fonction de filtrage des produits avec useMemo pour optimiser les performances
