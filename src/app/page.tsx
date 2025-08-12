@@ -7,6 +7,7 @@ import NosProduits from '@/components/NosProduits'
 import QuiSommesNous from '@/components/QuiSommesNous'
 import NosMarques from '@/components/NosMarques'
 import Footer from '@/components/Footer'
+import FloatingMessengerButton from '@/components/FloatingMessengerButton'
 
 export const metadata = {
   title: 'SAAMDIS - Distributeur alimentaire à La Réunion',
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <HeroBanner />
       <Avantages />
+      <FloatingMessengerButton />
       <MeilleursProduits />
       <Nouveautes />
       <NosProduits />
