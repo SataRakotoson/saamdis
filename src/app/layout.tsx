@@ -35,7 +35,13 @@ export default function RootLayout({
             gtag('config', 'G-7TJPQXVLTT');
           `}
         </Script>
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="9TUvzYwzCrFt3q2MPLC7Eg" async></Script>
+        
+        {/* Ahrefs Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="9TUvzYwzCrFt3q2MPLC7Eg"
+          strategy="afterInteractive"
+        />
         
         {children}
       </body>
