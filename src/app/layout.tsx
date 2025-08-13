@@ -39,9 +39,17 @@ export default function RootLayout({
         {/* Ahrefs Analytics */}
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
-          data-key="9TUvzYwzCrFt3q2MPLC7Eg"
           strategy="afterInteractive"
         />
+        <Script id="ahrefs-analytics" strategy="afterInteractive">
+          {`
+            var ahrefs_analytics_script = document.createElement('script');
+            ahrefs_analytics_script.async = true;
+            ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
+            ahrefs_analytics_script.setAttribute('data-key', '9TUvzYwzCrFt3q2MPLC7Eg');
+            document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
+          `}
+        </Script>
         
         {children}
       </body>
