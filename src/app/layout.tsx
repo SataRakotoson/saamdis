@@ -20,8 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="9TUvzYwzCrFt3q2MPLC7Eg" async></script>
+      </head>
       <body className={inter.className}>{children}</body>
-
     </html>
   )
 } 

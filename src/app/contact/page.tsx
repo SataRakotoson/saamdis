@@ -80,8 +80,8 @@ export default function Contact() {
                 <div className="space-x-4 card-contact">
                   <Clock className="w-10 h-10 text-primary" />
                     <h3 className="text-lg font-semibold text-gray-800">Service commercial</h3>
-                    <p className="text-gray-600">Lundi - Vendredi : 8h00 - 18h00</p>
-                    <p className="text-gray-600">Samedi : 9h00 - 17h00</p>
+                    <p className="text-gray-600">Lundi - Vendredi : 8h00 - 17h00</p>
+                    <p className="text-gray-600">Samedi : 8h00 - 12h00</p>
                     <p className="text-gray-600">Dimanche : Fermé</p>
                 </div>
               </div>
