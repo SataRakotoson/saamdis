@@ -22,8 +22,17 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="9TUvzYwzCrFt3q2MPLC7Eg" async></script>
+        <script>
+          var ahrefs_analytics_script = document.createElement('script');
+          ahrefs_analytics_script.async = true;
+          ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
+          ahrefs_analytics_script.setAttribute('data-key', '9TUvzYwzCrFt3q2MPLC7Eg');
+          document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
+        </script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 } 
