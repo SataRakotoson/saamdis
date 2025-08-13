@@ -31,8 +31,8 @@ export default function ProductsList({ produits }: ProductsListProps) {
       const categoryMapping: { [key: string]: string } = {
         'sucres': 'sucres',
         'sales': 'sales',
-        'confiseries_cereales': 'confiseries_cereales',
-        'jus_boissons': 'jus_boissons'
+        'confiseries': 'confiseries_cereales',
+        'boissons': 'jus_boissons'
       }
       
       if (categoryMapping[categoryFromUrl]) {

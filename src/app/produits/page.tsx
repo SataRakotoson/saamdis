@@ -6,6 +6,7 @@ import { getProduits } from '@/lib/airtable'
 export const metadata = {
   title: 'SAAMDIS - Nos produits',
   description: 'SAAMDIS propose des produits pour tous les goûts, à tous les prix. Un fournisseur réunionnais proche de ses clients et à l’écoute du marché.',
+  canonical: 'https://www.saamdis.fr/produits'
 }
 
 export default async function Produits() {

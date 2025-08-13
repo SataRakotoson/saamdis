@@ -1,0 +1,14 @@
+# Robots pour SAAMDIS
+User-agent: *
+Allow: /
+
+# Empêcher l’indexation des variantes filtrées (mêmes contenus que /produits)
+Disallow: /*?category=
+Disallow: /*&category=
+
+# (Optionnel) Bloquer d'autres paramètres de tracking
+Disallow: /*?utm_
+Disallow: /*&utm_
+
+# Localisation du sitemap
+Sitemap: https://www.saamdis.fr/sitemap.xml
