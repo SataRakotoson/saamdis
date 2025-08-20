@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import ProductsList from '@/components/ProductsList'
 import { getProduits } from '@/lib/airtable'
 import { Metadata } from 'next'
+import ProductsPageJsonLd from '@/components/jsonld/ProductsPageJsonLd'
 
 // Fonction pour générer des métadonnées dynamiques
 export async function generateMetadata({ searchParams }: { searchParams: { category?: string } }): Promise<Metadata> {
@@ -49,12 +50,13 @@ export async function generateMetadata({ searchParams }: { searchParams: { categ
   }
 }
 
-export default async function Produits() {
+export default async function Produits({ searchParams }: { searchParams: { category?: string } }) {
   // Récupération des produits côté serveur
   const produits = await getProduits()
 
   return (
     <main className="min-h-screen">
+      <ProductsPageJsonLd products={produits} category={searchParams.category} />
       <Header />
       
       {/* Hero Section */}

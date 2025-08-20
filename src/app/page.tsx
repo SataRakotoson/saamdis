@@ -8,6 +8,7 @@ import QuiSommesNous from '@/components/QuiSommesNous'
 import NosMarques from '@/components/NosMarques'
 import Footer from '@/components/Footer'
 import FloatingMessengerButton from '@/components/FloatingMessengerButton'
+import HomePageJsonLd from '@/components/jsonld/HomePageJsonLd'
 
 export const metadata = {
   title: 'SAAMDIS - Distributeur alimentaire à La Réunion',
@@ -17,6 +18,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <HomePageJsonLd />
       <Header />
       <HeroBanner />
       <Avantages />

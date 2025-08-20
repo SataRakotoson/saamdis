@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import AboutPageJsonLd from '@/components/jsonld/AboutPageJsonLd'
 
 export const metadata = {
   title: 'SAAMDIS - Qui sommes-nous ?',
@@ -10,6 +11,7 @@ export const metadata = {
 export default function APropos() {
   return (
     <main className="min-h-screen about-page">
+      <AboutPageJsonLd />
       <Header />
       
       {/* Hero Section */}

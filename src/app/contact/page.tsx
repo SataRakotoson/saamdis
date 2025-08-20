@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Header from '@/components/Header'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Footer from '@/components/Footer'
+import ContactPageJsonLd from '@/components/jsonld/ContactPageJsonLd'
 
 
 export default function Contact() {
@@ -29,6 +30,7 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen">
+      <ContactPageJsonLd />
       <Header />
       
       {/* Hero Section */}

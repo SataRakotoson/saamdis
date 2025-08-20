@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
+import JsonLd, { organizationSchema, websiteSchema } from '@/components/JsonLd'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></meta>
+      </head>
       <body className={inter.className}>
         {/* Google Analytics */}
         <Script
@@ -50,6 +55,10 @@ export default function RootLayout({
             document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
           `}
         </Script>
+        
+        {/* Données structurées globales */}
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
         
         {children}
       </body>
